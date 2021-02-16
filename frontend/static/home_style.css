@@ -12,6 +12,7 @@
   transition-duration: 0.4s;
 }
 
+
 .button2 {background-color: #008CBA;} /* Blue */
 .button3 {background-color: #f44336;} /* Red */
 .button4 {background-color: #e7e7e7; color: black;} /* Gray */
@@ -24,4 +25,8 @@
   width: auto;
   display: inline-block;
   font-size: 16px;
+}
+
+.field{
+  height: 280px;
 }
