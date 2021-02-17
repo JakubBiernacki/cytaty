@@ -2,6 +2,7 @@
 {% load static %}
 
 {%block content%}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <div class="col-md-9 mt-5">
@@ -14,22 +15,18 @@
 
     <div class="row d-flex justify-content-between">
 
-        <div  class=" mt-5 col-md-8 field border border-3  rounded">
-            <div class="p-5">
-                <h3>&#8222;<span id="cytat">Wybierz autora i naciśnij losuj lub zostaw ustawione na wszyscy i losuj pośród wszystkich
-                    cytatów</span>&#8221;</h3><br>~ <span id='autor'>autor</span>
+        <div class="col-md-8">
+
+            <div  class=" mt-5 field border border-3  rounded">
+                <div class="p-5">
+                    <h3>&#8222;<span id="cytat">Wybierz autora i naciśnij losuj lub zostaw ustawione na wszyscy i losuj pośród wszystkich
+                        cytatów</span>&#8221;</h3><br>~ <span id='autor'>autor</span>
+                </div>
+
             </div>
+            <div class="d-flex justify-content-between">
 
-        </div>
-
-        <img style="height:280px" src="media/user.png"  class=" img-thumbnail mt-5 col-5 col-md-3">
-
-
-    </div>
-
-    <div class="row">
-        <div class="col-12 mt-2 d-flex justify-content-between ">
-            <button class="align-self-center button button5  fw-bold">
+                <button class="align-self-center button button5 mt-3 fw-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shuffle"
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -37,8 +34,37 @@
                     <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" /></svg>
             
                     Losuj
-            </button>
-            <div class="align-self-center">
+                </button>
+
+            <div class="ocena  d-flex justify-content-between">
+            
+                <div id="like" class="ocena  text-center pt-2">
+                    <i  class=" fa fa-thumbs-up"></i>
+                    <div class="like_count text-muted"></div>
+
+                </div>
+                
+                <div id='dislike' class="ocena text-center pt-2">
+                    <i  class=" fa fa-thumbs-down"></i>
+                    <div class="dislike_count text-muted"></div>
+                </div>
+                
+                
+                
+            </div>
+
+
+
+
+
+        </div>
+
+
+        </div>
+
+        <div class="col-md-4 ">
+            <img style="height:280px" src="media/user.png"  class=" float-end img-thumbnail mt-5 col-10">
+            <div class="align-self-center mt-3 float-end">
                 <h3>Autor:
 
                     <select class="form-select custom-select ">
@@ -51,10 +77,16 @@
 
             </div>
         </div>
+
     </div>
+
+    </div>
+
+    
 
 
 </div>
+
 
 <script src="{%static 'home_app.js'%}"></script>
 

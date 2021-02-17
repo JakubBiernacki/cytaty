@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from .models import Autor,Cytat
 from .serializers import AutorSerializer,CytatSerializer
 from rest_framework.response import Response
-
+from django.shortcuts import render,get_object_or_404
 #permission
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -16,8 +16,7 @@ class AutorViewSet(viewsets.ModelViewSet):
     queryset = Autor.objects.all()
     serializer_class = AutorSerializer
 
-    authentication_classes = [SessionAuthentication,BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+
 
 class CytatViewSet(viewsets.ModelViewSet):
     """
@@ -26,7 +25,13 @@ class CytatViewSet(viewsets.ModelViewSet):
     queryset = Cytat.objects.all()
     serializer_class = CytatSerializer
 
-    authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+class CytatyAutoraViewSet(viewsets.ViewSet):
+
+    def retrieve(self, request, pk=None):
+        queryset = Cytat.objects.all()
+        cytaty = queryset.filter(autor=pk)
+        serializer = CytatSerializer(cytaty,many=True)
+        return Response(serializer.data)
+
 
 

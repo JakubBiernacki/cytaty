@@ -30,3 +30,19 @@
 .field{
   height: 280px;
 }
+
+.fa{
+  font-size: 2rem;
+  margin-right: 10px;
+  transition-duration: 0.4s;
+  color: #33393f;
+}
+.fa-thumbs-up:hover{
+  color: #0a6d13;
+  cursor: pointer;
+}
+
+.fa-thumbs-down:hover{
+  color: #611207;
+  cursor: pointer;
+}
