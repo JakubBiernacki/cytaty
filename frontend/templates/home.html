@@ -26,7 +26,7 @@
             </div>
             <div class="d-flex justify-content-between">
 
-                <button class="align-self-center button button5 mt-3 fw-bold">
+                <button class="align-self-center losuj button button5 mt-3 fw-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shuffle"
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -68,7 +68,7 @@
                 <h3>Autor:
 
                     <select class="form-select custom-select ">
-                        <option value="0">wszyscy</option>
+                        <option value="">--Wszyscy--</option>
 
                     </select>
 
@@ -88,6 +88,7 @@
 </div>
 
 
-<script src="{%static 'home_app.js'%}"></script>
+<script src="{%static 'home_app.js'%}" type="module" ></script>
+<script src="{%static 'getcookie.js'%}"></script>
 
 {%endblock%}

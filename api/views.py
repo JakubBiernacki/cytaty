@@ -27,6 +27,11 @@ class CytatViewSet(viewsets.ModelViewSet):
 
 class CytatyAutoraViewSet(viewsets.ViewSet):
 
+    def list(self,request):
+        queryset = Cytat.objects.all()
+        serializer = CytatSerializer(queryset, many=True)
+        return Response(serializer.data)
+
     def retrieve(self, request, pk=None):
         queryset = Cytat.objects.all()
         cytaty = queryset.filter(autor=pk)
