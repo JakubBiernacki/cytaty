@@ -17,3 +17,10 @@ class Cytat(models.Model):
 
     def __str__(self):
         return self.tresc
+
+class Propozycje(models.Model):
+    autor = models.ForeignKey(Autor,on_delete=models.CASCADE)
+    tresc = models.TextField()
+
+    def __str__(self):
+        return self.tresc

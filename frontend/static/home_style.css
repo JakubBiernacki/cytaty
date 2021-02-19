@@ -26,6 +26,12 @@
   display: inline-block;
   font-size: 16px;
 }
+#fname{
+  border-radius: 0;
+  width: auto;
+  font-size: 16px;
+
+}
 
 .field{
   height: 280px;
@@ -45,4 +51,34 @@
 .fa-thumbs-down:hover{
   color: #611207;
   cursor: pointer;
+}
+
+label,
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea {
+    
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+textarea#styled {
+	
+	/* height: 120px; */
+	border: 3px solid #cccccc;
+	padding: 25px;
+  
+	font-family: Tahoma, sans-serif;
+  background-color: #282d31;
+	background-position: bottom right;
+  color: white;
+	background-repeat: no-repeat;
 }

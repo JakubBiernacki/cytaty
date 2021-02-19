@@ -7,6 +7,7 @@ router = routers.DefaultRouter()
 router.register(r'autor', views.AutorViewSet)
 router.register(r'cytaty', views.CytatViewSet)
 router.register('CytatyAutora', views.CytatyAutoraViewSet, basename='cytatyautora')
+router.register('propozycje',views.PropozycjeViewSet,basename='propozycje')
 
 urlpatterns = [
     path('', include(router.urls)),

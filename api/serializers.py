@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Autor,Cytat
+from .models import Autor,Cytat,Propozycje
 
 class AutorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -9,4 +9,9 @@ class AutorSerializer(serializers.ModelSerializer):
 class CytatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cytat
+        fields = '__all__'
+
+class PropozycjeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Propozycje
         fields = '__all__'

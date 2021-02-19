@@ -62,12 +62,12 @@
 
         </div>
 
-        <div class="col-md-4 ">
+        <div class="col-md-4 d-none d-md-block">
             <img style="height:280px" src="media/user.png"  class=" float-end img-thumbnail mt-5 col-10">
             <div class="align-self-center mt-3 float-end">
                 <h3>Autor:
 
-                    <select class="form-select custom-select ">
+                    <select class="form-select select-autor custom-select float-end">
                         <option value="">--Wszyscy--</option>
 
                     </select>
@@ -80,15 +80,54 @@
 
     </div>
 
+
+    <div class="row mt-5">
+        <div class="col-12 mt-5 ">
+            <h2 class="text-center mb-5  mt-3"><span class="badge  bg-secondary">Zaproponuj cytat</span> </h2>
+
+
+            <!-- <label for="story">Tell us your story:</label> -->
+            <div class="w-100 d-flex justify-content-center mb-5">
+            <div class="col-8 ">
+            
+            <h3>Autor:
+                <select class="form-select add_select custom-select float-end">
+                    
+
+                </select>
+
+            </h3>
+            <textarea id="styled"  class="col-12" name="story" rows="7" placeholder="Wpisz cytat..."></textarea>
+
+            <button class="float-end add_kom button button5 mt-1 fw-bold">
+                    Wyślij
+                </button>
+
+            </div>
+
+            </div>
+            
+            
+
+            
+        </div>
     </div>
+
+    </div>
+
+    
 
     
 
 
 </div>
+<!-- toast -->
 
 
-<script src="{%static 'home_app.js'%}" type="module" ></script>
+
+
+
+<script src="{%static 'home_app.js'%}" type="module"></script>
 <script src="{%static 'getcookie.js'%}"></script>
 
 {%endblock%}
